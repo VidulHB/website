@@ -1,20 +1,3 @@
 .user {
   border-radius: 1000px;
 }
-
-::-webkit-scrollbar {
-  width: 10px;
-  background: #353353;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: 0 0 5px transparent;
-  border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #5393f1;
-  border-radius: 10px;
-}

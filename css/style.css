@@ -41,6 +41,94 @@ Author URI: https://avipatilweb.me/
 }
 
 html {
+    height: 100%;
+    margin: 0 !important;
+  overflow: auto !important;
+
+    --bg: #353353;
+    --bg-panel: #353353;
+    --color-headings: #0077FF;
+    --color-text: rgb(255, 255, 255);
+    --color-2: #FF4C60;
+    --title: #FFF;
+    --bg2: #302f4e;
+    --boxes: rgba(69, 67, 96, 0.1);
+}
+
+html[data-theme='dark'] {
+  margin: 0 !important;
+  overflow: auto !important;
+    --bg: #f9f8ff;
+    --bg-panel: #f9f8ff;
+    --color-headings: #3694FF;
+    --color-text: rgb(146, 146, 146);
+    --color-2: #FF4C60;
+    --title: rgb(253, 253, 253);
+    --bg2: #302f4e;
+    --boxes: rgb(150, 150, 150);
+}
+
+body {
+    background-color: var(--bg);
+    font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  color: var(--color-text);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 52px;
+	height: 27px;
+	background: grey;
+	float: right;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: var(--color-headings);
+}
+
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+/* html {
   margin: 0 !important;
   overflow: auto !important;
 }
@@ -54,7 +142,90 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+} */
+
+/*=================================================================*/
+/*                      DARK MODE                              
+/*=================================================================*/
+
+
+body .section-title {
+  color: var(--color-text);
 }
+body .section-title:before {
+  background: url("../images/dots-bg-light.svg");
+}
+body .bg-dark {
+  background: var(--bg2) !important;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  color: var(--color-text);
+}
+body .triangle-top:before {
+  border-bottom-color: var(--bg2);
+}
+body .timeline.exp .timeline-container::after, body .timeline.edu .timeline-container::after {
+  background: var(--bg2);
+}
+body .portfolio-filter li {
+  color: var(--color-text);
+}
+body a:hover {
+  color: var(--color-text);
+}
+body .portfolio-filter li.current {
+  color: var(--color-text);
+}
+body .blog-item .details h4.title a {
+  color: var(--color-text);
+}
+body .blog-item .details h4.title a:hover {
+  color: var(--color-2);
+}
+body .contact-info {
+  background-image: url("../images/map-light.png");
+}
+body .white-popup {
+  background: var(--bg);
+}
+body footer.footer {
+  border-top: solid 1px var(--bg);
+}
+body .content-blog,
+body .blog-page-section {
+  background: var(--bg);
+}
+body .bg-white {
+  background-color: var(--bg2) !important;
+}
+body .blog-standard .meta li a, body .blog-standard .title a, body .comment-author .fn {
+  color: var(--title);
+}
+body .blog-page-section .blog-pagination ul li {
+  background-color: var(--bg2) !important;
+}
+body .blog-page-section .blog-single {
+  background-color: var(--bg2) !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--bg);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: 0 0 5px transparent;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5393f1;
+  border-radius: 10px;
+}
+
+
 
 img {
   max-width: 100%;
@@ -874,7 +1045,7 @@ section {
 }
 
 section.home {
-  background: #353353;
+  background: var(--bg);
   padding: 0;
   height: 100vh;
   min-height: 100vh;
@@ -887,27 +1058,27 @@ section.home .intro {
   z-index: 1;
 }
 section.home .intro h1 {
-  color: #FFF;
+  color: var(--color-text);
   font-size: 36px;
 }
 section.home .intro span {
-  color: #FFF;
+  color: var(--color-text);
   font-size: 16px;
 }
 section.home .social-icons li a {
-  color: #FFF;
+  color: var(--color-text);
 }
 section.home.light {
-  background: #F9F9FF;
+  background: var(--color-text);
 }
 section.home.light .intro h1 {
-  color: #353353;
+  color: var(--color-text);
 }
 section.home.light .intro span {
-  color: #454360;
+  color: var(--color-text);
 }
 section.home.light .social-icons li a {
-  color: #353353;
+  color: var(--color-text);
 }
 section.home.light .social-icons li a:hover {
   color: #FFD15C;
@@ -1178,7 +1349,7 @@ select.portfolio-filter-mobile {
 }
 .fact-item .icon {
   font-size: 36px;
-  color: #DEDEEA;
+  color: var(--color-text);
   float: left;
 }
 .fact-item .number {
@@ -1484,8 +1655,8 @@ select.portfolio-filter-mobile {
   cursor: pointer;
 }
 .blog-page-section .shadow-dark, .blog-page-section .form-control, .blog-page-section .desktop-header-3 .dropdown-menu, .desktop-header-3 .blog-page-section .dropdown-menu {
-  -webkit-box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
-          box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  -webkit-box-shadow: 0px 5px 20px 0px var(--boxes);
+          box-shadow: 0px 5px 20px 0px var(--boxes);
 }
 .blog-page-section .widget-header {
   margin-bottom: 15px;
@@ -1778,84 +1949,22 @@ select.portfolio-filter-mobile {
 }
 
 footer.footer {
-  background: #353353;
+  background: var(--bg);
   padding: 40px 0;
   text-align: center;
 }
 footer.footer .copyright {
-  color: #9C9AB3;
+  color: var(--color-text);
   font-size: 14px;
 }
 footer.footer.light {
   background: #F9F9FF;
-  border-top: solid 1px rgba(0, 0, 0, 0.05);
+  border-top: solid 1px var(--bg);
 }
 
-/*=================================================================*/
-/*                      DARK MODE                              
-/*=================================================================*/
-body.dark {
-  color: #FFF;
-  background-color: #353353;
-}
-body.dark .section-title {
-  color: #FFF;
-}
-body.dark .section-title:before {
-  background: url("../images/dots-bg-light.svg");
-}
-body.dark .bg-dark {
-  background: #302f4e !important;
-}
-body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
-  color: #FFF;
-}
-body.dark .triangle-top:before {
-  border-bottom-color: #302f4e;
-}
-body.dark .timeline.exp .timeline-container::after, body.dark .timeline.edu .timeline-container::after {
-  background: #302f4e;
-}
-body.dark .portfolio-filter li {
-  color: #FFF;
-}
-body.dark a:hover {
-  color: #FFF;
-}
-body.dark .portfolio-filter li.current {
-  color: #FF4C60;
-}
-body.dark .blog-item .details h4.title a {
-  color: #FFF;
-}
-body.dark .blog-item .details h4.title a:hover {
-  color: #FF4C60;
-}
-body.dark .contact-info {
-  background-image: url("../images/map-light.png");
-}
-body.dark .white-popup {
-  background: #302f4e;
-}
-body.dark footer.footer {
-  border-top: solid 1px rgba(255, 255, 255, 0.1);
-}
-body.dark .content-blog,
-body.dark .blog-page-section {
-  background: #353353;
-}
-body.dark .bg-white {
-  background-color: #302f4e !important;
-}
-body.dark .blog-standard .meta li a, body.dark .blog-standard .title a, body.dark .comment-author .fn {
-  color: #fff;
-}
-body.dark .blog-page-section .blog-pagination ul li {
-  background-color: #302f4e !important;
-}
-body.dark .blog-page-section .blog-single {
-  background-color: #302f4e !important;
-}
+
+
+
 
 /*=================================================================*/
 /*                     BUTTONS
@@ -2310,8 +2419,8 @@ body.dark .blog-page-section .blog-single {
 }
 
 .shadow-dark, .desktop-header-3 .dropdown-menu, .form-control, .form-control:focus {
-  -webkit-box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
-  box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  -webkit-box-shadow: 0px 5px 20px 0px var(--boxes);
+  box-shadow: 0px 5px 20px 0px var(--boxes);
 }
 
 .shadow-light {
@@ -2784,7 +2893,7 @@ body {
   }
 
   body.dark .triangle-top-sm:before {
-    border-bottom-color: #302f4e;
+    border-bottom-color: var(--bg2);
   }
 }
 @media only screen and (min-width: 768px) {
@@ -2804,8 +2913,8 @@ body {
     top: 20%;
   }
 
-  body.dark .triangle-left-md:before {
-    border-right-color: #302f4e;
+  body .triangle-left-md:before {
+    border-right-color: var(--bg2);
   }
 }
 @media only screen and (max-width: 576px) {
