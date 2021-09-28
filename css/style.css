@@ -653,7 +653,6 @@ header.desktop-header-1 .vertical-menu li .switch {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-backface-visibility: hidden;
 }
 header.desktop-header-1 .vertical-menu li a {
   color: #FFF;
@@ -2534,11 +2533,6 @@ footer.footer.light {
   height: 100%;
 }
 
-.mfp-zoom-in {
-  /* start state */
-  /* animate in */
-  /* animate out */
-}
 .mfp-zoom-in .mfp-with-anim {
   opacity: 0;
   -webkit-transition: all 0.2s ease-in-out;
