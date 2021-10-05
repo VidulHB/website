@@ -68,6 +68,19 @@ html[data-theme='dark'] {
     --boxes: rgb(150, 150, 150);
 }
 
+html[data-theme='helloween'] {
+  margin: 0 !important;
+  overflow: auto !important;
+    --bg: #ff6005;
+    --bg-panel: #ff5e00;
+    --color-headings: #ff0000;
+    --color-text: rgb(255, 255, 255);
+    --color-2: #3d3d3d;
+    --title: rgb(51, 51, 51);
+    --bg2: #fde34c;
+    --boxes: rgb(150, 150, 150);
+}
+
 body {
     background-color: var(--bg);
     font-family: "Rubik", sans-serif;
@@ -78,6 +91,49 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* input[type=checkboxi]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 52px;
+	height: 27px;
+	background: grey;
+	float: right;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: var(--color-headings);
+}
+
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 45px;
+} */
+
 input[type=checkbox]{
 	height: 0;
 	width: 0;
@@ -946,9 +1002,9 @@ header.mobile-header-2 .site-logo img {
 }
 
 .desktop-header-3 {
-  background: #353353;
+  background: var(--bg2);
   padding: 20px 0;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px var(--bg2);
 }
 .desktop-header-3 .navbar {
   padding: 0;
@@ -966,10 +1022,10 @@ header.mobile-header-2 .site-logo img {
   padding: 0;
 }
 .desktop-header-3 .nav-link.active {
-  color: #FFD15C !important;
+  color: var(--bg) !important;
 }
 .desktop-header-3 .nav-link:hover {
-  color: #FFD15C !important;
+  color: var(--bg) !important;
 }
 .desktop-header-3 .dropdown-menu {
   position: absolute;
@@ -981,7 +1037,7 @@ header.mobile-header-2 .site-logo img {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #212529;
+  color: var(--bg2);
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -1004,10 +1060,10 @@ header.mobile-header-2 .site-logo img {
 }
 .desktop-header-3.light {
   background: #F9F9FF;
-  border-bottom: solid 1px rgba(0, 0, 0, 0.05);
+  border-bottom: solid 1px var(--bg2)
 }
 .desktop-header-3.light .navbar-dark .navbar-nav .nav-link {
-  color: #353353;
+  color: var(--bg2);
 }
 
 /*=================================================================*/
